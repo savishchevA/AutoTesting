@@ -7,7 +7,7 @@ public class Main {
         Student student1=new Student("Александр", "Савищев", 3, new int[]{7, 8, 9, 5});
         Student student2=new Student("Дмитрий", "Линник", 3, new int[]{8, 9, 6});
         Student student3=new Student("Тимофей", "Серединский", 3, new int[]{7, 7});
-        Student student4=new Student("Андрей", "Миругин", 3, new int[]{9,8,7});
+        Student student4=new Student("Тимур", "Савко", 3, new int[]{9,8,7});
         Student student5=new Student("Максим","Бойко",3,new int[]{6,5,7});
         System.out.println(student1+"Средний балл: "+student1.getAverageRating()+"\n");
         System.out.println(student2+"Средний балл: "+student2.getAverageRating()+"\n");
