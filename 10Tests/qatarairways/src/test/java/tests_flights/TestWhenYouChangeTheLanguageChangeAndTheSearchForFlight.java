@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import pages.PageFlights;
 
-public class TestDataInFieldToAndInFieldFromIsTheSame {
+public class TestWhenYouChangeTheLanguageChangeAndTheSearchForFlight {
     private PageFlights pageFlights = new PageFlights();
 
     @BeforeClass
@@ -15,12 +15,14 @@ public class TestDataInFieldToAndInFieldFromIsTheSame {
         Driver.getDriver().get("https://www.qatarairways.com/en-us/homepage.html");
     }
     @Test
-    public void dataInFieldToAndInFieldFromIsTheSame() {
+    public void whenYouChangeTheLanguageChangeAndTheSearchForFlight() {
+        pageFlights.clickCountryName();
+        pageFlights.clickToFrenchLang();
         pageFlights.scrollToBookingTabViewContainer();
         pageFlights.clearInputFrom();
-        pageFlights.setInputFrom("Madrid");
-        pageFlights.clearInputTo();
-        pageFlights.setInputTo("Madrid");
+        pageFlights.setInputFrom("Париж");
+        String expectedError = "Aucune ville ne correspond à votre demande";
+        Assert.assertEquals(pageFlights.getPopupError(), expectedError);
     }
     @AfterClass
     public static void closeDriver() {
