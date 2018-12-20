@@ -1,13 +1,9 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
 
 public class PageManageBooking extends MainPage{
@@ -19,7 +15,7 @@ public class PageManageBooking extends MainPage{
         private WebElement  inputBookingReference;
         @FindBy(id = "T7-retrieve")
         private WebElement retrieveBooking;
-        @FindBy(xpath = "//div[@class='error']")
+        @FindBy(id = "checkinErrorBlock")
         private WebElement error;
 
 
