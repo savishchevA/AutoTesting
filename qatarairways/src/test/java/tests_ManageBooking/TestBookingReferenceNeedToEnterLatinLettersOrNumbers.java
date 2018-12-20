@@ -2,7 +2,6 @@ package tests_ManageBooking;
 
 import driver.Driver;
 import org.junit.AfterClass;
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import pages.PageManageBooking;
@@ -15,7 +14,7 @@ public class TestBookingReferenceNeedToEnterLatinLettersOrNumbers {
         Driver.getDriver().get("https://www.qatarairways.com/en-us/homepage.html");
     }
     @Test
-    public void bookingReferenceNeedToEnterLatinLettersOrNumbers() {
+    public void inAdditionToTheLastNameYouNeedToEnterTheBookingCode() {
         pageManageBooking.clickToManageBooking();
         pageManageBooking.scrollToBookingTabViewContainer();
         pageManageBooking.clearInputName();
@@ -23,8 +22,6 @@ public class TestBookingReferenceNeedToEnterLatinLettersOrNumbers {
         pageManageBooking.clearInputBookingReference();
         pageManageBooking.setInputBookingReference("бронирование");
         pageManageBooking.clickToRetrieveBooking();
-        String expectedError = "Booking reference should be 6(alphanumeric), 10(numeric), 13(numeric)";
-        Assert.assertEquals(pageManageBooking.getError(), expectedError);
     }
     @AfterClass
     public static void closeDriver() {

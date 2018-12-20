@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import pages.PageFlights;
 
-public class TestCheckThatTheSelectedDepartureCityExists {
+public class TestIfSelectOneWayThatFieldReturnDateIsNotActive {
     private PageFlights pageFlights = new PageFlights();
 
     @BeforeClass
@@ -15,15 +15,13 @@ public class TestCheckThatTheSelectedDepartureCityExists {
         Driver.getDriver().get("https://www.qatarairways.com/en-us/homepage.html");
     }
     @Test
-    public void checkThatTheSelectedDepartureCityExists() {
+    public void selectOneWayThatFieldReturnDateIsNotActive() {
         pageFlights.scrollToBookingTabViewContainer();
-        pageFlights.clearInputFrom();
-        pageFlights.setInputFrom("zero");
-        String expectedError = "No city matching for your request";
-        Assert.assertEquals(pageFlights.getPopupError(), expectedError);
+        pageFlights.clickRadioButtonOneWay();
+        Assert.assertFalse(pageFlights.inputReturnDateIsEnabled());
     }
-    @AfterClass
+   /* @AfterClass
     public static void closeDriver() {
-       Driver.closeDriver();
-    }
+        Driver.closeDriver();
+    }*/
 }

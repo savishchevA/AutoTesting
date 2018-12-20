@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import pages.PageFlights;
 
-public class TestDataInFieldToAndInFieldFromIsTheSame {
+public class TestCheckThatTheSelectedDepartureCityExists {
     private PageFlights pageFlights = new PageFlights();
 
     @BeforeClass
@@ -15,17 +15,13 @@ public class TestDataInFieldToAndInFieldFromIsTheSame {
         Driver.getDriver().get("https://www.qatarairways.com/en-us/homepage.html");
     }
     @Test
-    public void dataInFieldToAndInFieldFromIsTheSame() {
-//        pageFlights.scrollToBookingTabViewContainer();
+    public void checkThatTheSelectedDepartureCityExists() {
+        pageFlights.scrollToBookingTabViewContainer();
         pageFlights.clearInputFrom();
-        pageFlights.setInputFrom("Madrid");
-        pageFlights.clearInputTo();
-        pageFlights.setInputTo("Madrid");
-        String expectedError = "No city matching for your request";
-        Assert.assertEquals(pageFlights.getPopupError(), expectedError);
+        pageFlights.setInputFrom("zero");
     }
     @AfterClass
     public static void closeDriver() {
-        Driver.closeDriver();
+       Driver.closeDriver();
     }
 }

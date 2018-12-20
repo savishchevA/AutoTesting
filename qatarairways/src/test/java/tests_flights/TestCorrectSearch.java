@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import pages.PageFlights;
 
-public class TestIfSelectOneWayThatFieldReturnDateIsNotActive {
+public class TestCorrectSearch {
     private PageFlights pageFlights = new PageFlights();
 
     @BeforeClass
@@ -15,10 +15,18 @@ public class TestIfSelectOneWayThatFieldReturnDateIsNotActive {
         Driver.getDriver().get("https://www.qatarairways.com/en-us/homepage.html");
     }
     @Test
-    public void selectOneWayThatFieldReturnDateIsNotActive() {
+    public void correctSearch() {
         pageFlights.scrollToBookingTabViewContainer();
-        pageFlights.clickRadioButtonOneWay();
-        Assert.assertFalse(pageFlights.inputReturnDateIsEnabled());
+        pageFlights.clearInputFrom();
+        pageFlights.setInputFrom("Warsaw (WAW)");
+        pageFlights.clearInputTo();
+        pageFlights.setInputTo("Beijing (PEK)");
+        pageFlights.clearInputDepartDate();
+        pageFlights.setInputDepartDate("28 Dec 2018");
+        pageFlights.clearInputReturnDate();
+        pageFlights.setInputReturnDate("31 Dec 2018");
+        pageFlights.setInputPassenger("1 Passenger");
+        pageFlights.clickToShowflights();
     }
     @AfterClass
     public static void closeDriver() {
