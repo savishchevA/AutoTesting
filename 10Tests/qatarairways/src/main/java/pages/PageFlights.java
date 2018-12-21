@@ -14,7 +14,7 @@ public class PageFlights extends MainPage {
      private WebElement inputFrom;
      @FindBy(id = "T7-to")
      private WebElement inputTo;
-     @FindBy(xpath = "//div[@class='form-row']")
+     @FindBy(id = "T7-search")//xpath = "//div[@class='form-row']"
      private WebElement showFlights;
      @FindBy(xpath = "//span[contains(text(), 'One way')]")
      private WebElement radioButtonOneWay;

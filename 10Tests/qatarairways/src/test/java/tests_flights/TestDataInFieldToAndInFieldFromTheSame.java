@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import pages.PageFlights;
 
-public class TestDataInFieldToAndInFieldFromIsTheSame {
+public class TestDataInFieldToAndInFieldFromTheSame {
     private PageFlights pageFlights = new PageFlights();
 
     @BeforeClass
