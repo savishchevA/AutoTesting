@@ -5,7 +5,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 
 public class PageFlights extends MainPage {
@@ -36,7 +35,7 @@ public class PageFlights extends MainPage {
      private WebElement popupError;
 
 
-     public  void clearInputDepartDate(){
+    public  void clearInputDepartDate(){
          inputDepartDate.clear();}
      public  void clearInputReturnDate(){
          inputReturnDate.clear();

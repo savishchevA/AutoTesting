@@ -5,7 +5,6 @@ import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 import pages.PageFlights;
 
 public class TestFindTicketWhenAllFieldsAreEmpty {
@@ -33,6 +32,6 @@ public class TestFindTicketWhenAllFieldsAreEmpty {
     }
     @AfterClass
     public static void closeDriver() {
-       Driver.closeDriver();
+        Driver.closeDriver();
     }
 }
