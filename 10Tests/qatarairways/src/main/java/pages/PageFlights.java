@@ -14,7 +14,7 @@ public class PageFlights extends MainPage {
      private WebElement inputFrom;
      @FindBy(id = "T7-to")
      private WebElement inputTo;
-     @FindBy(id = "T7-search")//xpath = "//div[@class='form-row']"
+     @FindBy(xpath = "//div[@class='form-row']")
      private WebElement showFlights;
      @FindBy(xpath = "//span[contains(text(), 'One way')]")
      private WebElement radioButtonOneWay;
@@ -96,7 +96,7 @@ public class PageFlights extends MainPage {
     }
     public void scrollToBookingTabViewContainer() {
         ((JavascriptExecutor)driver).executeScript("window.scrollBy(" + 0 + ","
-                + 60 + ");");
+                + 80 + ");");
     }
     public String getError() {
         return error.getText();
