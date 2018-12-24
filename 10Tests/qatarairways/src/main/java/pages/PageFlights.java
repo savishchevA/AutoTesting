@@ -95,7 +95,7 @@ public class PageFlights extends MainPage {
     }
     public void scrollToBookingTabViewContainer() {
         ((JavascriptExecutor)driver).executeScript("window.scrollBy(" + 0 + ","
-                + 80 + ");");
+                + 200 + ");");
     }
     public String getError() {
         return error.getText();
