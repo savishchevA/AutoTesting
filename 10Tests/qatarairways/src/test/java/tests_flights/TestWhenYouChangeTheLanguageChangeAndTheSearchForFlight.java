@@ -12,7 +12,7 @@ public class TestWhenYouChangeTheLanguageChangeAndTheSearchForFlight {
 
     @BeforeClass
     public static void openDriver() {
-        Driver.getDriver().get("https://www.qatarairways.com/en-us/homepage.html");
+        Driver.getDriver().get("https://www.qatarairways.com/fr-dz/homepage.html");
     }
     @Test
     public void whenYouChangeTheLanguageChangeAndTheSearchForFlight() {
@@ -21,7 +21,7 @@ public class TestWhenYouChangeTheLanguageChangeAndTheSearchForFlight {
         pageFlights.scrollToBookingTabViewContainer();
         pageFlights.clearInputFrom();
         pageFlights.setInputFrom("Париж");
-        String expectedError = "لا توجد مدن مطابقة طلبك";
+        String expectedError = "No city matching for your request";
         Assert.assertEquals(pageFlights.getPopupError(), expectedError);
     }
     @AfterClass
