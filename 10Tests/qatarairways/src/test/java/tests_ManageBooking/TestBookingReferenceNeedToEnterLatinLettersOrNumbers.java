@@ -17,7 +17,7 @@ public class TestBookingReferenceNeedToEnterLatinLettersOrNumbers {
     @Test
     public void bookingReferenceNeedToEnterLatinLettersOrNumbers() {
         pageManageBooking.clickToManageBooking();
-        pageManageBooking.scrollToBookingTabViewContainer();
+        pageManageBooking.scrollToManageBookingContainer();
         pageManageBooking.clearInputName();
         pageManageBooking.setInputName("Savischev");
         pageManageBooking.clearInputBookingReference();
@@ -26,8 +26,8 @@ public class TestBookingReferenceNeedToEnterLatinLettersOrNumbers {
         String expectedError = "Booking reference should be 6(alphanumeric), 10(numeric), 13(numeric)";
         Assert.assertEquals(pageManageBooking.getError(), expectedError);
     }
-    @AfterClass
+    /*@AfterClass
     public static void closeDriver() {
         Driver.closeDriver();
-    }
+    }*/
 }
