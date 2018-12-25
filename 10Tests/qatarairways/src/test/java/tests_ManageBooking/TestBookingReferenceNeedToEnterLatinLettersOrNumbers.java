@@ -17,7 +17,7 @@ public class TestBookingReferenceNeedToEnterLatinLettersOrNumbers {
     @Test
     public void bookingReferenceNeedToEnterLatinLettersOrNumbers() {
         pageManageBooking.clickToManageBooking();
-        pageManageBooking.scrollToBookingTabViewContainer();
+        pageManageBooking.scrollToManageBooking();
         pageManageBooking.clearInputName();
         pageManageBooking.setInputName("Savischev");
         pageManageBooking.clearInputBookingReference();

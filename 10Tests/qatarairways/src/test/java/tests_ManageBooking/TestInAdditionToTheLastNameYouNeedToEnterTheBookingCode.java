@@ -17,7 +17,7 @@ public class TestInAdditionToTheLastNameYouNeedToEnterTheBookingCode {
     @Test
     public void inAdditionToTheLastNameYouNeedToEnterTheBookingCode() {
         pageManageBooking.clickToManageBooking();
-        pageManageBooking.scrollToBookingTabViewContainer();
+        pageManageBooking.scrollToManageBooking();
         pageManageBooking.clearInputName();
         pageManageBooking.setInputName("Savischev");
         pageManageBooking.clickToRetrieveBooking();
