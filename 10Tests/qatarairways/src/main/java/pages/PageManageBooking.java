@@ -39,7 +39,7 @@ public class PageManageBooking extends MainPage{
         }
         public void scrollToManageBooking() {
                 ((JavascriptExecutor)driver).executeScript("window.scrollBy(" + 0 + ","
-                        + 200 + ");");
+                        + 60 + ");");
         }
         public String getError() {
                 return error.getText();
