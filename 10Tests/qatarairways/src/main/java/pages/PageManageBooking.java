@@ -37,7 +37,7 @@ public class PageManageBooking extends MainPage{
         public void clickToRetrieveBooking() {
                 retrieveBooking.click();
         }
-        public void scrollToManageBookingContainer() {
+        public void scrollToBookingTabViewContainer() {
                 ((JavascriptExecutor)driver).executeScript("window.scrollBy(" + 0 + ","
                         + 60 + ");");
         }
