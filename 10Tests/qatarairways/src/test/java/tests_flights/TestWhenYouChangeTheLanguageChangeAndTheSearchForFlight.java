@@ -21,7 +21,7 @@ public class TestWhenYouChangeTheLanguageChangeAndTheSearchForFlight {
         pageFlights.scrollToBookingTabViewContainer();
         pageFlights.clearInputFrom();
         pageFlights.setInputFrom("Париж");
-        String expectedError = "Aucune ville ne correspond à votre demande";
+        String expectedError = "لا توجد مدن مطابقة طلبك";
         Assert.assertEquals(pageFlights.getPopupError(), expectedError);
     }
     @AfterClass

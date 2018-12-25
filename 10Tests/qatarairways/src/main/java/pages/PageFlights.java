@@ -19,7 +19,7 @@ public class PageFlights extends MainPage {
      private WebElement radioButtonOneWay;
      @FindBy(id = "T7-passengers")
      private WebElement inputPassenger;
-     @FindBy(xpath = "//a[contains(text(), 'Algérie - Français')]")
+     @FindBy(xpath = "//a[contains(text(), 'السودان | العربيّة')]")
      private WebElement frenchLang;
      @FindBy(id = "T7-arrival_1")
      private WebElement inputReturnDate;
