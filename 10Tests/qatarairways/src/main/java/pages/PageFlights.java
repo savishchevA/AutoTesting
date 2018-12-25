@@ -91,7 +91,7 @@ public class PageFlights extends MainPage {
          showFlights.click();
      }
     public void clickToFrenchLang() {
-         frenchLang.click();
+         new Actions(driver).moveToElement(frenchLang).click().build().perform();
     }
     public void scrollToBookingTabViewContainer() {
         ((JavascriptExecutor)driver).executeScript("window.scrollBy(" + 0 + ","
